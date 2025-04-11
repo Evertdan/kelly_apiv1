@@ -59,6 +59,8 @@ dependencies = [
 
     # --- MongoDB (Driver si se usa History Service) ---
     "pymongo>=4.0.0,<5.0.0",                # Requerido por langchain-mongodb
+	# ... otras dependencias ...
+    "markdown>=3.5,<4.0", # Añade esta línea
 ]
 
 # (Opcional) Scripts de consola

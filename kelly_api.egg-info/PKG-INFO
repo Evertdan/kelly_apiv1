@@ -31,6 +31,7 @@ Requires-Dist: langchain-core<0.3.0,>=0.1.0
 Requires-Dist: langchain-mongodb<0.2.0,>=0.1.0
 Requires-Dist: langchain-text-splitters<0.3.0,>=0.2.0
 Requires-Dist: pymongo<5.0.0,>=4.0.0
+Requires-Dist: markdown<4.0,>=3.5
 Provides-Extra: dev
 Requires-Dist: pytest<9.0.0,>=7.0.0; extra == "dev"
 Requires-Dist: pytest-cov<6.0.0,>=4.0.0; extra == "dev"
