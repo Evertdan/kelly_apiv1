@@ -1,0 +1,137 @@
+// kelly_api/data/priority_context.json
+{
+    "faqs": [
+      // --- Saludos y Básicos ---
+      {
+        "q": "Hola",
+        "a": "Hola, has llamado a Computo Contable Soft. Soy Kely, tu asistente virtual. ¿En qué puedo ayudarte hoy?",
+        "keywords": ["hola", "saludo", "buenos dias", "buenas tardes", "buenas noches", "buen día", "kely"]
+      },
+      {
+        "q": "Buenos días",
+        "a": "Buenos días. Soy Kely, tu asistente virtual de Computo Contable Soft. ¿En qué te puedo asistir?",
+        "keywords": ["hola", "saludo", "buenos dias", "kely"]
+      },
+      {
+        "q": "¿Quién eres?",
+        "a": "Soy Kely, un asistente virtual de Computo Contable Soft, especializado en MiAdminXML y MiExpedienteContable.",
+        "keywords": ["quien eres", "kellybot", "kely", "asistente", "bot", "computo contable soft"]
+      },
+      {
+        "q": "Gracias",
+        "a": "¡De nada! Ha sido un placer ayudarte. ¿Necesitas algo más?",
+        "keywords": ["gracias", "ok", "listo", "de nada", "amable", "resuelto", "perfecto"]
+      },
+      // --- Contacto y Soporte ---
+      {
+        "q": "¿Cómo obtengo soporte técnico?",
+        // MODIFICADO: Añadido el número de teléfono
+        "a": "Puedes contactarnos a través de nuestro sitio web oficial (www.adminxml.com o www.miexpedientecontable.com), correo electrónico de ventas.computocontable@gmail.com o llamando al 7712850074 para asistencia.",
+        "keywords": ["soporte", "ayuda", "tecnico", "asistencia", "contacto", "telefono", "email", "dudas", "problemas", "contactar", "sitio web", "numero"]
+      },
+      {
+        "q": "Necesito hablar con un humano",
+        // MODIFICADO: Añadido el número de teléfono
+        "a": "Entendido. Para hablar con un agente de soporte, por favor llama al 7712850074 o utiliza el chat/correo disponibles en nuestro sitio web durante el horario de atención.",
+        "keywords": ["humano", "agente", "persona", "soporte", "ayuda real", "telefono", "chat", "contactar", "real", "asesor", "numero"]
+      },
+       {
+        "q": "¿Cuál es el horario de atención?",
+        "a": "Nuestro horario de atención al cliente por teléfono (7712850074) y chat es de Lunes a Viernes de 9:00 AM a 2:00 PM y de 3:00 PM a 6:00 PM(Hora del Centro de México).", 
+        "keywords": ["horario", "atencion", "horas", "servicio cliente", "soporte", "disponible", "telefono", "chat", "contacto", "cuando atienden", "numero"]
+      },
+      // --- MiAdminXML ---
+      {
+        "q": "¿Qué es MiAdminXML?",
+        "a": "Es un software especializado en la gestión integral de facturas electrónicas (CFDI) en México. Facilita la descarga masiva, organización, validación y administración de comprobantes.",
+        "keywords": ["definicion", "que es", "miadminxml", "cfdi", "facturas", "descarga", "administracion", "resumen"]
+      },
+      {
+        "q": "¿Para qué sirve MiAdminXML?",
+        "a": "Sirve para descargar, organizar, validar y administrar fácilmente tus facturas electrónicas (CFDI), además de generar reportes útiles y facilitar la contabilidad electrónica.",
+        "keywords": ["sirve", "proposito", "utilidad", "uso", "miadminxml", "cfdi", "facturas"]
+      },
+      {
+        "q": "¿Cómo descargo MiAdminXML?",
+        "a": "Puedes descargarlo desde nuestro sitio oficial: https://www.adminxml.com.",
+        "keywords": ["descargar", "bajar", "instalador", "obtener", "miadminxml", "link", "enlace", "sitio web"]
+      },
+      {
+        "q": "¿Cómo activo MiAdminXML?",
+        "a": "Tras instalarlo, ve a la sección de licenciamiento e introduce la clave de licencia que recibiste al comprarla o durante el periodo de prueba.",
+        "keywords": ["activar", "activacion", "licencia", "clave", "key", "miadminxml", "instalar"]
+      },
+      {
+        "q": "¿Cuánto cuesta la licencia MiAdminXML Plus?",
+        "a": "La Licencia Plus tiene un costo de $1,449 MXN por año (IVA incluido).",
+        "keywords": ["precio", "costo", "valor", "miadminxml", "licencia", "plus", "anual", "cuanto"]
+      },
+       {
+        "q": "¿Cuánto cuesta la licencia MiAdminXML Pro?",
+        "a": "La Licencia Pro tiene un costo de $2,295 MXN por año (IVA incluido).",
+        "keywords": ["precio", "costo", "valor", "miadminxml", "licencia", "pro", "anual", "cuanto"]
+      },
+       {
+        "q": "¿Hay prueba gratuita de MiAdminXML?",
+        "a": "Sí, ofrecemos una prueba gratuita de 30 días con beneficios de la licencia Plus y el módulo de conciliación de pagos de la Pro.",
+        "keywords": ["prueba", "demo", "trial", "gratis", "probar", "miadminxml", "30 dias", "evaluacion"]
+      },
+       {
+         "q": "¿Qué sistema operativo necesita MiAdminXML?",
+         "a": "Requiere Windows 10 u 11 de 64 bits. No es compatible con Mac o Linux.",
+         "keywords": ["requisitos", "sistema operativo", "so", "os", "windows", "mac", "linux", "miadminxml"]
+       },
+       {
+          "q": "¿Cuánta RAM necesita MiAdminXML?",
+          "a": "Se recomiendan 4 GB de memoria RAM o más.",
+          "keywords": ["requisitos", "ram", "memoria", "requerimientos", "minimo", "miadminxml"]
+        },
+      // --- MiExpedienteContable ---
+       {
+        "q": "¿Qué es MiExpedienteContable?",
+        "a": "Es un software diseñado específicamente para despachos contables, que ayuda a automatizar tareas y centralizar la gestión de múltiples contribuyentes.",
+        "keywords": ["definicion", "que es", "miexpedientecontable", "expediente contable", "despachos", "contadores", "mec"]
+       },
+      {
+        "q": "¿Para qué sirve MiExpedienteContable?",
+        "a": "Principalmente para gestionar la información de tus contribuyentes, descargar documentos del SAT, administrar declaraciones y pagos (SAT, IMSS, etc.) y manejar certificados digitales.",
+        "keywords": ["sirve", "uso", "proposito", "utilidad", "miexpedientecontable", "contribuyentes", "sat", "declaraciones", "pagos", "imss", "certificados", "efirma", "csd"]
+      },
+       {
+        "q": "¿Cuánto cuesta MiExpedienteContable Plus?",
+        "a": "La Licencia Plus de MiExpedienteContable cuesta $1,449 MXN por año (IVA incluido).",
+        "keywords": ["precio", "costo", "valor", "miexpedientecontable", "licencia", "plus", "anual", "cuanto", "mec"]
+      },
+       {
+        "q": "¿Cuánto cuesta MiExpedienteContable Profesional?",
+        "a": "La Licencia Profesional cuesta $2,295 MXN por año (IVA incluido).",
+        "keywords": ["precio", "costo", "valor", "miexpedientecontable", "licencia", "profesional", "anual", "cuanto", "mec"]
+      },
+      {
+        "q": "¿Hay demo de MiExpedienteContable?",
+        "a": "Sí, puedes probar MiExpedienteContable gratis por 30 días con las funciones de la licencia Profesional, limitado a 3 contribuyentes.",
+        "keywords": ["prueba", "demo", "trial", "gratis", "miexpedientecontable", "30 dias", "evaluacion", "mec"]
+      },
+       {
+         "q": "¿Qué Windows necesita MiExpedienteContable?",
+         "a": "Requiere Windows 10 u 11 de 64 bits. No es compatible con Mac.",
+         "keywords": ["requisitos", "sistema operativo", "so", "os", "windows", "mac", "miexpedientecontable", "mec"]
+       },
+      // --- Licenciamiento General / Pagos ---
+      {
+          "q": "¿En cuántos equipos puedo usar mi licencia?",
+          "a": "Cada licencia (tanto de MiAdminXML como de MiExpedienteContable) puede activarse en un solo equipo o sesión de usuario a la vez.",
+          "keywords": ["equipos", "computadoras", "pcs", "licencia", "uso", "simultaneo", "instalaciones", "usuarios"]
+      },
+      {
+        "q": "¿Cuánto tarda en llegar mi licencia si pago en Oxxo?",
+        "a": "Después de realizar el pago en Oxxo, la clave de licencia y factura (si la solicitaste) se envía automáticamente a tu correo registrado en un lapso de 3 a 24 horas. Revisa también tu bandeja de SPAM.",
+        "keywords": ["licencia", "tiempo", "envío", "correo", "oxxo", "factura", "spam", "tarda", "pago"]
+      },
+      {
+        "q": "¿Cuántas veces puedo activar mi licencia en un año?",
+        "a": "El proceso de activación/transferencia de licencia a un nuevo equipo se puede realizar hasta 5 veces durante el año de vigencia de la licencia.",
+        "keywords": ["activación", "límite", "veces", "año", "transferencia", "equipos", "restricción", "cambio equipo"]
+      }
+    ]
+  }

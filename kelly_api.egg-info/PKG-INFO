@@ -1,3 +1,54 @@
+Metadata-Version: 2.4
+Name: kelly_api
+Version: 0.1.0
+Summary: Backend API para KellyBot usando FastAPI, RAG con Qdrant y LLMs.
+Author-email: Tu Nombre / Equipo <tu.correo@example.com>
+License: MIT
+Keywords: fastapi,api,chatbot,rag,qdrant,vector database,embeddings,sentence-transformers,llm,deepseek,openai,mongodb,langchain
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Natural Language :: Spanish
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Topic :: Internet :: WWW/HTTP
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: fastapi<0.112.0,>=0.109.0
+Requires-Dist: uvicorn[standard]<0.30.0,>=0.25.0
+Requires-Dist: pydantic-settings<3.0.0,>=2.0.0
+Requires-Dist: qdrant-client<2.0.0,>=1.9.0
+Requires-Dist: sentence-transformers<3.0.0,>=2.2.0
+Requires-Dist: numpy<2.0.0,>=1.21.0
+Requires-Dist: torch
+Requires-Dist: openai<2.0.0,>=1.10.0
+Requires-Dist: langchain-core<0.3.0,>=0.1.0
+Requires-Dist: langchain-mongodb<0.2.0,>=0.1.0
+Requires-Dist: langchain-text-splitters<0.3.0,>=0.2.0
+Requires-Dist: pymongo<5.0.0,>=4.0.0
+Provides-Extra: dev
+Requires-Dist: pytest<9.0.0,>=7.0.0; extra == "dev"
+Requires-Dist: pytest-cov<6.0.0,>=4.0.0; extra == "dev"
+Requires-Dist: pytest-mock<4.0.0,>=3.0.0; extra == "dev"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "dev"
+Requires-Dist: httpx<0.29.0,>=0.25.0; extra == "dev"
+Requires-Dist: ruff<1.0.0,>=0.4.0; extra == "dev"
+Requires-Dist: black<25.0.0,>=23.0.0; extra == "dev"
+Requires-Dist: mypy<2.0.0,>=1.0.0; extra == "dev"
+Requires-Dist: pre-commit<4.0.0,>=3.0.0; extra == "dev"
+Provides-Extra: test
+Requires-Dist: pytest<9.0.0,>=7.0.0; extra == "test"
+Requires-Dist: pytest-cov<6.0.0,>=4.0.0; extra == "test"
+Requires-Dist: pytest-mock<4.0.0,>=3.0.0; extra == "test"
+Requires-Dist: pytest-asyncio>=0.21.0; extra == "test"
+Requires-Dist: httpx<0.29.0,>=0.25.0; extra == "test"
+Dynamic: license-file
+
 # 🤖 **Kelly API**  
 **Backend para Chatbot con RAG (Retrieval-Augmented Generation)**  
 

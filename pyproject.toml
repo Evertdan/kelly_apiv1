@@ -1,0 +1,125 @@
+# kelly_api/pyproject.toml
+
+# Especifica el sistema de construcción del proyecto (PEP 517)
+[build-system]
+requires = ["setuptools>=61.0"] # Requiere setuptools
+build-backend = "setuptools.build_meta" # Backend a usar
+
+# Metadatos del proyecto (PEP 621)
+[project]
+name = "kelly_api" # Nombre del paquete API
+version = "0.1.0" # Versión inicial
+description = "Backend API para KellyBot usando FastAPI, RAG con Qdrant y LLMs." # Descripción
+readme = "README.md" # Archivo README
+requires-python = ">=3.10" # Versión mínima de Python requerida
+license = { text = "MIT" } # Licencia (asegúrate de tener archivo LICENSE)
+keywords = ["fastapi", "api", "chatbot", "rag", "qdrant", "vector database", "embeddings", "sentence-transformers", "llm", "deepseek", "openai", "mongodb", "langchain"] # Palabras clave actualizadas
+authors = [
+    # Reemplaza con tu nombre y correo
+    { name = "Tu Nombre / Equipo", email = "tu.correo@example.com" },
+]
+classifiers = [ # Clasificadores estándar de PyPI
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Natural Language :: Spanish",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Internet :: WWW/HTTP",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+# Dependencias principales del proyecto (Runtime)
+dependencies = [
+    # --- API Web ---
+    "fastapi>=0.109.0,<0.112.0",
+    "uvicorn[standard]>=0.25.0,<0.30.0",
+
+    # --- Configuración ---
+    "pydantic-settings>=2.0.0,<3.0.0",
+
+    # --- Qdrant ---
+    "qdrant-client>=1.9.0,<2.0.0",
+
+    # --- Embeddings ---
+    "sentence-transformers>=2.2.0,<3.0.0",
+    "numpy>=1.21.0,<2.0.0",
+    "torch", # Requerido por sentence-transformers (instalar con CUDA opcionalmente)
+
+    # --- LLM (Generativo) ---
+    "openai>=1.10.0,<2.0.0", # Cliente compatible OpenAI/DeepSeek
+
+    # --- Langchain (Core y componentes específicos) ---
+    "langchain-core>=0.1.0,<0.3.0",         # Schemas (BaseMessage) y abstracciones
+    "langchain-mongodb>=0.1.0,<0.2.0",      # Para History Service
+    "langchain-text-splitters>=0.2.0,<0.3.0",# Para Text Chunker Service
+
+    # --- MongoDB (Driver si se usa History Service) ---
+    "pymongo>=4.0.0,<5.0.0",                # Requerido por langchain-mongodb
+]
+
+# (Opcional) Scripts de consola
+# [project.scripts]
+# kelly-api = "app.main:app"
+
+# (Opcional) URLs del proyecto
+# [project.urls]
+# "Homepage" = "https://github.com/tu_usuario/kelly_api"
+# "Repository" = "https://github.com/tu_usuario/kelly_api"
+# "Bug Tracker" = "https://github.com/tu_usuario/kelly_api/issues"
+
+# Dependencias opcionales para desarrollo y pruebas
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0,<9.0.0",
+    "pytest-cov>=4.0.0,<6.0.0",
+    "pytest-mock>=3.0.0,<4.0.0",
+    "pytest-asyncio>=0.21.0", # Para pruebas async
+    "httpx>=0.25.0,<0.29.0",   # Cliente HTTP async para pruebas API
+    "ruff>=0.4.0,<1.0.0",     # Linter/Formateador
+    "black>=23.0.0,<25.0.0",  # Formateador
+    "mypy>=1.0.0,<2.0.0",     # Chequeo de tipos
+    "pre-commit>=3.0.0,<4.0.0",
+    # "python-multipart",      # Descomentar si usas Form data en FastAPI
+]
+test = [
+    "pytest>=7.0.0,<9.0.0",
+    "pytest-cov>=4.0.0,<6.0.0",
+    "pytest-mock>=3.0.0,<4.0.0",
+    "pytest-asyncio>=0.21.0",
+    "httpx>=0.25.0,<0.29.0",
+]
+
+# --- Configuración específica para Setuptools ---
+[tool.setuptools]
+# Indicar explícitamente el paquete para evitar error flat-layout
+packages = ["app"]
+
+# --- Configuraciones de Herramientas ---
+
+[tool.ruff]
+line-length = 88
+select = ["E", "W", "F", "I", "C", "B", "UP", "RUF"]
+ignore = []
+exclude = [ ".venv", "venv", ".git", "__pycache__", "dist", "build", "data", ".env", ".env.sample" ]
+
+[tool.ruff.lint.isort] # Sección corregida para isort
+known_first_party = ["app"]
+
+# Configuración para pytest
+[tool.pytest.ini_options]
+minversion = "7.0"
+addopts = "-ra -q --cov=app --cov-report=term-missing" # Cobertura para 'app'
+testpaths = ["tests"]
+asyncio_mode = "auto" # Modo recomendado para pytest-asyncio
+
+# Configuración para mypy
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+ignore_missing_imports = true
+# plugins = ["pydantic.mypy"] # Descomentar si es necesario

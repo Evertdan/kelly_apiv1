@@ -1,0 +1,10 @@
+LICENSE
+README.md
+pyproject.toml
+app/__init__.py
+app/main.py
+kelly_api.egg-info/PKG-INFO
+kelly_api.egg-info/SOURCES.txt
+kelly_api.egg-info/dependency_links.txt
+kelly_api.egg-info/requires.txt
+kelly_api.egg-info/top_level.txt
